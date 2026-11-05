@@ -1,0 +1,31 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+
+# Runtime/customer evidence belongs outside the reusable project
+/runs/
+/outputs/
+/F5-Migrations/
+/evidence/
+/analysis/
+/run.json
+/intake.json
+/intake-history.json
+/evidence-summary.json
+/evidence-summary.md
+/evidence-index.json
+/findings.json
+/report.md
+/report-outline.md
+*.qkview
+*.ucs
+*.sqlite
+*.sqlite-*
+*.cookies
+*.raw

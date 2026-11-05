@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "catalog_version": "2026-11-05.1",
+  "source_document_date": "2025-03",
+  "last_reviewed": "2026-11-05",
+  "status": "Dated reference baseline; verify current specifications, availability, lifecycle, and image compatibility before procurement.",
+  "sources": {
+    "datasheet": "https://cdn.studio.f5.com/files/k6fem79d/production/53945912df3c20c35e332d917fe06be302f639fe.pdf",
+    "sizing": "https://clouddocs.f5.com/training/community/rseries-training/html/rseries_performance_and_sizing.html",
+    "ha": "https://clouddocs.f5.com/training/community/rseries-training/html/rseries_high_availability.html",
+    "migration": "https://clouddocs.f5.com/training/community/rseries-training/html/migration_to_rseries.html",
+    "ve_limits": "https://my.f5.com/manage/s/article/K14810",
+    "ve_setup": "https://clouddocs.f5.com/cloud/public/v1/vmware/vmware_setup.html",
+    "ve_matrix": "https://clouddocs.f5.com/cloud/public/v1/matrix.html",
+    "ve_optimization": "https://clouddocs.f5.com/cloud/public/v1/vmware/optimize.html"
+  },
+  "benchmark_scope": "Independent published LTM benchmarks, not simultaneous guarantees for a customer's traffic mix. rSeries figures include platform virtualization overhead. Full-appliance figures cannot be assigned to each of several tenants.",
+  "platforms": [
+    {"model":"r2600","page":13,"l4_gbps":20,"l7_gbps":13,"l4_cps":170000,"l7_rps":475000,"concurrent_connections":19000000,"rsa2k_tps":7000,"ecdhe_p256_rsa2k_tps":5000,"ecdhe_ecdsa_p256_tps":5000,"ssl_bulk_gbps":8,"physical_ram_gb":32,"tenant_cpus":4,"default_full_tenant_ram_gib":12,"fpga":false,"fiber_ports":"4 × 25/10/1GbE","copper_ports":"4 × 10/1GbE","typical_watts":85},
+    {"model":"r2800","page":13,"l4_gbps":25,"l7_gbps":17,"l4_cps":350000,"l7_rps":875000,"concurrent_connections":19000000,"rsa2k_tps":15000,"ecdhe_p256_rsa2k_tps":10000,"ecdhe_ecdsa_p256_tps":10000,"ssl_bulk_gbps":10,"physical_ram_gb":32,"tenant_cpus":8,"default_full_tenant_ram_gib":24,"fpga":false,"fiber_ports":"4 × 25/10/1GbE","copper_ports":"4 × 10/1GbE","typical_watts":85},
+    {"model":"r4600","page":12,"l4_gbps":40,"l7_gbps":30,"l4_cps":500000,"l7_rps":1300000,"concurrent_connections":38000000,"rsa2k_tps":30000,"ecdhe_p256_rsa2k_tps":14000,"ecdhe_ecdsa_p256_tps":14000,"ssl_bulk_gbps":20,"physical_ram_gb":64,"tenant_cpus":12,"default_full_tenant_ram_gib":36,"fpga":false,"fiber_ports":"4 × 25/10/1GbE","copper_ports":"4 × 10/1GbE","typical_watts":105},
+    {"model":"r4800","page":12,"l4_gbps":50,"l7_gbps":40,"l4_cps":750000,"l7_rps":1800000,"concurrent_connections":38000000,"rsa2k_tps":45000,"ecdhe_p256_rsa2k_tps":20000,"ecdhe_ecdsa_p256_tps":20000,"ssl_bulk_gbps":25,"physical_ram_gb":64,"tenant_cpus":16,"default_full_tenant_ram_gib":48,"fpga":false,"fiber_ports":"4 × 25/10/1GbE","copper_ports":"4 × 10/1GbE","typical_watts":105},
+    {"model":"r5600","page":11,"l4_gbps":95,"l7_gbps":60,"l4_cps":1000000,"l7_rps":2500000,"concurrent_connections":75000000,"rsa2k_tps":60000,"ecdhe_p256_rsa2k_tps":30000,"ecdhe_ecdsa_p256_tps":30000,"ssl_bulk_gbps":35,"physical_ram_gb":128,"tenant_cpus":12,"default_full_tenant_ram_gib":42.5,"fpga":true,"fiber_ports":"8 × 25/10GbE; 2 × 100/40GbE","copper_ports":"No copper data ports listed","typical_watts":425},
+    {"model":"r5800","page":11,"l4_gbps":95,"l7_gbps":85,"l4_cps":1400000,"l7_rps":3300000,"concurrent_connections":85000000,"rsa2k_tps":80000,"ecdhe_p256_rsa2k_tps":50000,"ecdhe_ecdsa_p256_tps":50000,"ssl_bulk_gbps":45,"physical_ram_gb":128,"tenant_cpus":18,"default_full_tenant_ram_gib":63.5,"fpga":true,"fiber_ports":"8 × 25/10GbE; 2 × 100/40GbE","copper_ports":"No copper data ports listed","typical_watts":425},
+    {"model":"r5900","page":10,"l4_gbps":95,"l7_gbps":95,"l4_cps":1800000,"l7_rps":4300000,"concurrent_connections":100000000,"rsa2k_tps":100000,"ecdhe_p256_rsa2k_tps":55000,"ecdhe_ecdsa_p256_tps":70000,"ssl_bulk_gbps":50,"physical_ram_gb":128,"tenant_cpus":26,"default_full_tenant_ram_gib":91.5,"fpga":true,"fiber_ports":"8 × 25/10GbE; 2 × 100/40GbE","copper_ports":"No copper data ports listed","typical_watts":425}
+  ],
+  "ve": {
+    "sku_limits_verified": false,
+    "note": "K14810's full article was not retrievable during baseline preparation. Do not invent a current SKU table, throughput-accounting rule, CPU ceiling, or module entitlement. Check current licensing guidance and quotation.",
+    "requirements": ["Supported hypervisor and BIG-IP release combination", "CPU and RAM reservations", "Peer VMs on separate physical hosts and appropriate failure domains", "TLS and LTM/module-mix benchmark on the proposed host", "Single surviving member and host-contention test", "Image/disk capacity for selected modules, upgrades, and logs"]
+  }
+}
